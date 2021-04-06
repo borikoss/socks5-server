@@ -4,7 +4,8 @@ services:
   socks5:
     restart: always
     build: .
-    image: go-socks5-proxy
+    container_name: socks5-proxy
+    image: go-socks5-proxy:1.0.0
     env_file: .env
     ports:
       - "${LISTEN_IP}:1080:1080"
